@@ -30,7 +30,6 @@ Amazon EBS Volume size decreasing.
    
    d)Click Attach.
    
-
 4)We could start the instance and login to SSH. List all available volumes with lsblk. 
 
 The new volume is in /dev/xvdf.
@@ -43,7 +42,7 @@ The new volume is in /dev/xvdf.
    
    c)If it is displaying other than the above output, it means the volume has data. DO NOT format the volume if you saw this output.
    
-    d)Format the volume using command sudo mkfs -t ext4 /dev/xvdf 
+   d)Format the volume using command sudo mkfs -t ext4 /dev/xvdf 
     
 
 6)Mount the new volume
@@ -72,14 +71,13 @@ The new volume is in /dev/xvdf.
    
     d)Copy the UUID from /dev/xvda1 (paste anywhere to backup this UUID); This is your old UUID.
     
-     e)Use tune2fs to replace UUID sudo tune2fs -U COPIED_UUID /dev/xvdf; COPIED_UUID is the string value from point 4.
+    e)Use tune2fs to replace UUID sudo tune2fs -U COPIED_UUID /dev/xvdf; COPIED_UUID is the string value from point 4.
      
-     f)Check the system label from old-volume using the command sudo e2label /dev/xvda1 ; It will display a string like cloudimg-rootfs .
+    f)Check the system label from old-volume using the command sudo e2label /dev/xvda1 ; It will display a string like cloudimg-rootfs .
      
-     g)Replace new-volume label with old-volume label using command sudo e2label /dev/xvdf cloudimg-rootfs .
+    g)Replace new-volume label with old-volume label using command sudo e2label /dev/xvdf cloudimg-rootfs .
      
 9)We can logout SSH now.
-
 
 10)Stop instance my-instance
 
