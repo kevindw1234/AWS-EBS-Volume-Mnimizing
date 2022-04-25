@@ -90,3 +90,11 @@ Amazon EBS Volume size decreasing.
 14)Start instance my-instance
 
  
+## Connect with me:
+
+<p align="left">
+
+<a href = "https://www.linkedin.com/in/kevindw98/"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
+<a href = "https://www.instagram.com/kevin_danile_wilson/"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
+
+</p>
