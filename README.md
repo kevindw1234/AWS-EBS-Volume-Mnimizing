@@ -15,14 +15,20 @@ Amazon EBS Volume size decreasing.
     f)Add tag with Key : Name and value : new-volume
 
 3)Attach the new volume.
+
    a)Right click on the new volume.
+   
    b)Click Attach Volume.
+   
    c)Choose instance name my-instance .
+   
    d)Click Attach.
+   
 
 4)We could start the instance and login to SSH. List all available volumes with lsblk. The new volume is in /dev/xvdf.
 
 5)Format the new volume
+
    a)Check whether the volume has any data or not using command sudo file -s /dev/xvdf .
    b)If it is displaying /dev/xvdf: data, it means the volume is empty. We could format the volume.
    c)If it is displaying other than the above output, it means the volume has data. DO NOT format the volume if you saw this output.
