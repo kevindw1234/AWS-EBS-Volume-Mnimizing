@@ -22,6 +22,7 @@ Amazon EBS Volume size decreasing.
 
 3)Attach the new volume.
 
+
    a)Right click on the new volume.
    
    b)Click Attach Volume.
@@ -36,6 +37,7 @@ The new volume is in /dev/xvdf.
 
 5)Format the new volume
 
+
    a)Check whether the volume has any data or not using command sudo file -s /dev/xvdf .
    
    b)If it is displaying /dev/xvdf: data, it means the volume is empty. We could format the volume.
@@ -47,21 +49,24 @@ The new volume is in /dev/xvdf.
 
 6)Mount the new volume
 
+
   a)Create a directory to mount using the command sudo mkdir /mnt/new-volume .
   
   b)Mount the new volume into the directory using command sudo mount /dev/xvdf /mnt/new-volume .
   
- c)Check volume with command df -h; The new volume should be mounted now.
+  c)Check volume with command df -h; The new volume should be mounted now.
 
 
 
 7)Copy data from old volume to the new 
+
 
    a)Use rsync to copy from old volume to the new volume sudo rsync -axv / /mnt/new-volume/.
    
    b)Relax and wait until it’s finished. 
 
 8)Prepare new volume
+
 
    a)Install grub on new-volume using the command sudo grub-install --root-directory=/mnt/new-volume/ --force /dev/xvdf .
    
